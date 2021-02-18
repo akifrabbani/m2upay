@@ -12,8 +12,8 @@ class M2UPay
     
 	public function EncryptData($v, $secretKey)
 	{
-		$v =  $this->PKCS5_Padding($v, mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, 'ecb'));
-	    return rtrim(base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128,$secretKey, $v, MCRYPT_MODE_ECB, mcrypt_create_iv(mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB), MCRYPT_RAND))), "\0");
+		$v =  $this->PKCS5_Padding($v, phpseclib_mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, 'ecb'));
+	    return rtrim(base64_encode(phpseclib_mcrypt_encrypt(MCRYPT_RIJNDAEL_128,$secretKey, $v, MCRYPT_MODE_ECB, phpseclib_mcrypt_create_iv(phpseclib_mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB), MCRYPT_RAND))), "\0");
 	}
 
     public function getEncryptionData($data, $envType)
