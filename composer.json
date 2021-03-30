@@ -13,7 +13,6 @@
     ],
     "require": {
         "php": ">=5.5",
-        "ext-mcrypt": "*",
         "phpseclib/mcrypt_compat": "^2.0"
     },
     "autoload": {
