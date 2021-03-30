@@ -53,7 +53,7 @@ class M2UPay
 		if ($envType == 1)
 		{
 			// User Acceptance Test (UAT) Environment
-			$actionUrl = "https://202.162.18.55:8443/testM2uPayment";
+			$actionUrl = "https://m2upayuat.maybank2u.com.my/testM2uPayment";
 		}
 		else if ($envType == 2)
 		{
